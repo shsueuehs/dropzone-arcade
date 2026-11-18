@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111522">
+<title>DropZone Arcade</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#"><span class="logo-mark">DZ</span><span>DROPZONE<small>ARCADE</small></span></a>
+  <span class="top-note">A LITTLE BREAK · PLAY RESPONSIBLY</span>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div><p class="eyebrow">WELCOME TO YOUR GAME ROOM</p><h1>CHOOSE YOUR<br><em>NEXT GAME.</em></h1>
+    <p class="sub">A collection of quick browser games. No account, downloads, or sign-in needed.</p></div>
+    <div class="hero-art"><div class="orb"></div><div class="orbit o1"></div><div class="orbit o2"></div><span class="hero-symbol">✦</span><span class="hero-caption">PRESS PLAY<br>HAVE FUN</span></div>
+  </section>
+
+  <section class="section-head"><div><p class="eyebrow">THE ARCADE</p><h2>Game library</h2></div><span class="count">05 GAMES</span></section>
+  <nav class="tabs" aria-label="Game selection">
+    <button class="tab active" data-game="reaction">⚡ Reaction</button>
+    <button class="tab" data-game="memory">🧠 Memory</button>
+    <button class="tab" data-game="tictactoe">⭕ Tic-Tac-Toe</button>
+    <button class="tab" data-game="number">🔢 Number Hunt</button>
+    <button class="tab" data-game="house">🔑 The Quiet House</button>
+  </nav>
+
+  <section class="game-panel" aria-live="polite">
+    <div class="game-title"><div><p class="eyebrow" id="gameEyebrow">GAME 01 / QUICK REFLEX</p><h2 id="gameTitle">Reaction Test</h2><p id="gameDesc" class="game-desc">Wait for green, then tap as quickly as you can.</p></div><span class="game-badge" id="gameBadge">1 PLAYER</span></div>
+
+    <div class="game-view" id="reactionGame">
+      <button class="reaction-pad waiting" id="reactionPad"><span id="reactionText">START ROUND</span><small id="reactionHint">Tap to begin</small></button>
+      <div class="result-line" id="reactionResult">Your best time: —</div>
+    </div>
+
+    <div class="game-view hidden" id="memoryGame">
+      <div class="memory-info"><span>Moves: <b id="memoryMoves">0</b></span><span>Pairs: <b id="memoryPairs">0 / 6</b></span><button class="small-btn" id="memoryReset">New board</button></div>
+      <div class="memory-grid" id="memoryGrid"></div>
+      <p class="helper">Find all six matching pairs.</p>
+    </div>
+
+    <div class="game-view hidden" id="ticGame">
+      <div class="tic-status" id="ticStatus">Your turn: X</div>
+      <div class="tic-board" id="ticBoard"></div>
+      <button class="small-btn" id="ticReset">New round</button>
+    </div>
+
+    <div class="game-view hidden" id="numberGame">
+      <div class="number-card"><div class="number-big">?</div><p>I'm thinking of a number from <b>1 to 100</b>.</p>
+        <form id="guessForm"><input id="guessInput" type="number" min="1" max="100" placeholder="Your guess" required><button class="action-btn">GUESS</button></form>
+        <p class="feedback" id="guessFeedback">You have 7 tries. Good luck!</p><p class="helper">Tries left: <b id="triesLeft">7</b></p>
+        <button class="small-btn" id="guessReset">New number</button>
+      </div>
+    </div>
+
+    <div class="game-view hidden" id="houseGame">
+      <div class="house-layout">
+        <div class="house-copy">
+          <span class="house-label">ORIGINAL MINI HORROR / PUZZLE GAME</span>
+          <h3>THE QUIET HOUSE</h3>
+          <p>Find the key and reach the exit. The housekeeper patrols the halls—avoid crossing paths and plan your route.</p>
+          <div class="house-stats"><span>Moves <b id="houseMoves">0</b></span><span>Status <b id="houseStatus">Find the key</b></span></div>
+          <div class="house-controls">
+            <button data-dir="up">↑</button><div><button data-dir="left">←</button><button data-dir="down">↓</button><button data-dir="right">→</button></div>
+          </div>
+          <button class="small-btn" id="houseReset">Restart game</button>
+          <p class="helper">Use arrow keys or WASD. Collect the key (✦), then reach the exit (▣). Avoid the caretaker (●).</p>
+        </div>
+        <div class="maze-wrap"><div id="maze" class="maze" aria-label="The Quiet House maze"></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="tip"><span>ⓘ</span><p><b>Play thoughtfully.</b> This is a simple browser arcade for personal or school-approved use. Follow your school's device and internet rules. The Quiet House is an original, non-graphic spooky maze—not the official Granny game.</p></section>
+</main>
+<footer><span>DROPZONE ARCADE</span><span>Made for fun · No accounts · No tracking</span></footer>
+<script src="script.js"></script>
+</body></html>
